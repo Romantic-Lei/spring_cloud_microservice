@@ -1,0 +1,11 @@
+.settings/org.eclipse.m2e.core.prefs
+.project
+cloud-provider-payment8001/.classpath
+cloud-provider-payment8001/.settings/org.eclipse.m2e.core.prefs
+cloud-provider-payment8001/.settings/org.eclipse.jdt.core.prefs
+cloud-provider-payment8001/.settings/org.eclipse.core.resources.prefs
+cloud-provider-payment8001/target/classes/application.yml
+cloud-provider-payment8001/target/classes/com/luojia/springcloud/PaymentMain8001.class
+cloud-provider-payment8001/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-provider-payment8001/pom.xml
+cloud-provider-payment8001/target/classes/META-INF/MANIFEST.MF
+cloud-provider-payment8001/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-provider-payment8001/pom.properties
