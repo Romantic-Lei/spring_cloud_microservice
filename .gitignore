@@ -9,3 +9,12 @@ cloud-provider-payment8001/target/classes/com/luojia/springcloud/PaymentMain8001
 cloud-provider-payment8001/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-provider-payment8001/pom.xml
 cloud-provider-payment8001/target/classes/META-INF/MANIFEST.MF
 cloud-provider-payment8001/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-provider-payment8001/pom.properties
+.settings/org.eclipse.core.resources.prefs
+cloud-provider-payment8001/.settings/org.eclipse.wst.common.project.facet.core.xml
+cloud-provider-payment8001/target/classes/mapper/PaymentMapper.xml
+cloud-provider-payment8001/target/classes/com/luojia/springcloud/service/impl/PaymentServiceImpl.class
+cloud-provider-payment8001/target/classes/com/luojia/springcloud/service/PaymentService.class
+cloud-provider-payment8001/target/classes/com/luojia/springcloud/entities/Payment.class
+cloud-provider-payment8001/target/classes/com/luojia/springcloud/entities/CommonResult.class
+cloud-provider-payment8001/target/classes/com/luojia/springcloud/dao/PaymentDao.class
+cloud-provider-payment8001/target/classes/com/luojia/springcloud/controller/Controller.class
