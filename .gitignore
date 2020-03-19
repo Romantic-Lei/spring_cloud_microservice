@@ -18,3 +18,16 @@ cloud-provider-payment8001/target/classes/com/luojia/springcloud/entities/Paymen
 cloud-provider-payment8001/target/classes/com/luojia/springcloud/entities/CommonResult.class
 cloud-provider-payment8001/target/classes/com/luojia/springcloud/dao/PaymentDao.class
 cloud-provider-payment8001/target/classes/com/luojia/springcloud/controller/Controller.class
+cloud-api-common/pom.xml
+cloud-api-common/.settings/org.eclipse.m2e.core.prefs
+cloud-api-common/.settings/org.eclipse.jdt.core.prefs
+cloud-api-common/.settings/org.eclipse.core.resources.prefs
+cloud-api-common/.classpath
+cloud-api-common/target/cloud-api-common-0.0.1-SNAPSHOT.jar
+cloud-api-common/target/classes/com/luojia/springcloud/entities/Payment.class
+cloud-api-common/target/classes/com/luojia/springcloud/entities/CommonResult.class
+cloud-api-common/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-api-common/pom.xml
+cloud-api-common/target/maven-archiver/pom.properties
+cloud-api-common/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-api-common/pom.properties
+cloud-api-common/target/classes/META-INF/MANIFEST.MF
+cloud-consumer-order80/.settings/org.eclipse.wst.common.project.facet.core.xml
