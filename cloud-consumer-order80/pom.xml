@@ -9,6 +9,10 @@
 	</parent>
 	<artifactId>cloud-consumer-order80</artifactId>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
 		<dependency><!-- 引入自己定义的api通用包 -->
 			<groupId>cn.luojia.springcloud</groupId>
 			<artifactId>cloud-api-common</artifactId>
