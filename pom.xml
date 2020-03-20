@@ -13,6 +13,7 @@
   	<module>cloud-provider-payment8002</module>
   	<module>cloud-provider-payment8004</module>
   	<module>cloud-consumerzk-order80</module>
+  	<module>cloud-providerconsul-payment8006</module>
   </modules>
   <!--统一管理jar包和版本-->
     <properties>

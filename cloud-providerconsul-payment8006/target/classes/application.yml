@@ -1,0 +1,11 @@
+server:
+  port: 8006
+spring:
+  application:
+    # 服务别名---注册zookeeper到注册中心的名称
+    name: consul-provider-payment
+  cloud:
+    consul:
+    host: localhost
+    discovery:
+      service-name: ${spring.application.name}
