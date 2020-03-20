@@ -1,6 +1,7 @@
 package com.luojia.springcloud.controller;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Resource;
 
@@ -44,7 +45,7 @@ public class PaymentController {
     }
 
     @GetMapping(value = "payment/get/{id}")
-    public CommonResult getPaymentById(@PathVariable("id") Long id) {
+    public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         Payment paymentById = paymentService.getPaymentById(id);
         log.info("******查询结果：" + paymentById);
 
@@ -71,8 +72,18 @@ public class PaymentController {
         return this.discoveryClient;
     }
 
-    @GetMapping("payment/lb")
+    @GetMapping("/payment/lb")
     public String getPayment() {
+        return serverPort;
+    }
+    
+    @GetMapping("/payment/feign/timeout")
+    public String paymentFeignTimeOut() {
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return serverPort;
     }
 }
