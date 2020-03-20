@@ -1,7 +1,12 @@
 package com.luojia.springcloud.controller;
 
+import java.net.URI;
+import java.util.List;
+
 import javax.annotation.Resource;
 
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,6 +15,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.luojia.springcloud.entities.CommonResult;
 import com.luojia.springcloud.entities.Payment;
+import com.luojia.springcloud.lb.LoadBalance;
+import com.luojia.springcloud.lb.MyLb;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,6 +29,10 @@ public class OrderController {
     
     @Resource
     private RestTemplate restTemplate;
+    @Resource
+    private LoadBalance loadBalance;
+    @Resource
+    private DiscoveryClient discoveryClient;
     
     @GetMapping("/consumer/payment/create")
     public CommonResult<Payment> create(Payment payment){
@@ -46,4 +57,14 @@ public class OrderController {
         }
     }
     
+    @GetMapping("/consumer/payment/lb")
+    public String getPaymentLB() {
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+        if(instances == null || instances.size() <= 0) {
+            return null;
+        }
+        ServiceInstance serviceInstance = loadBalance.instances(instances);
+        URI uri = serviceInstance.getUri();
+        return restTemplate.getForObject(uri + "/payment/lb", String.class);
+    }
 }

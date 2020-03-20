@@ -8,7 +8,7 @@ import com.netflix.loadbalancer.RoundRobinRule;
 
 @Configuration
 public class MyRule {
-    
+
     @Bean
     public IRule mySelfRule() {
 //        // 定义为轮询(默认)，注册进eureka的服务后，若某个服务挂掉，之后依然会轮询访问到
@@ -19,6 +19,5 @@ public class MyRule {
 //        return new RetryRule();
         // 定义权重，响应速度越快的实例选择权重越多大。（可以快速点击查询模拟）
 //        return new WeightedResponseTimeRule();
-        
     }
 }
