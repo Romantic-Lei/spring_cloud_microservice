@@ -4,6 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.springframework.stereotype.Service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+
 @Service
 public class PaymentService {
     /**
@@ -24,10 +27,13 @@ public class PaymentService {
      * @param id
      * @return
      */
+    @HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler", commandProperties = {
+            @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value = "3000")
+    })
     public String paymentInfo_TimeOut(Integer id) {
-        /// int age = 10 / 0;
+//        int age = 10 / 0;
 
-        int timeNumber = 2;
+        int timeNumber = 5;
         try {
             // 暂停5秒钟
             TimeUnit.SECONDS.sleep(timeNumber);
@@ -36,5 +42,10 @@ public class PaymentService {
         }
         return "线程池:" + Thread.currentThread().getName() + " paymentInfo_TimeOut,id:" + id + "\t" + "O(∩_∩)O哈哈~  耗时(秒)"
                 + timeNumber;
+//        return "线程池:" + Thread.currentThread().getName() + " paymentInfo_TimeOut,id:" + id + "\t" + "O(∩_∩)O哈哈~  耗时(秒)";
+    }
+    
+    public String paymentInfo_TimeOutHandler(Integer id) {
+        return "线程池:" + Thread.currentThread().getName() + " 对不起，系统目前繁忙，请稍后再试,id:" + id + "\t" + "o(╥﹏╥)o";
     }
 }

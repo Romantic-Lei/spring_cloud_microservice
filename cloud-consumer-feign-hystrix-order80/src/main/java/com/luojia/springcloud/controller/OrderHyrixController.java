@@ -2,6 +2,7 @@ package com.luojia.springcloud.controller;
 
 import javax.annotation.Resource;
 
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.luojia.springcloud.service.PaymentHystrixService;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,6 +22,8 @@ public class OrderHyrixController {
     @Resource
     private PaymentHystrixService paymentHystrixService;
 
+//    没有使用@HystrixCommand注解，表示没有兜底方法，但是我们在服务层的@FeignClient注解中新增了一个回调类，专门处理
+//    没有指定错误处理的类
     @GetMapping("/consumer/payment/hystrix/ok/{id}")
     String paymentInfo_OK(@PathVariable("id") Integer id) {
         String result = paymentHystrixService.paymentInfo_OK(id);
