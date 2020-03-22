@@ -1,0 +1,21 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:Romantic-Lei/spring_cloud_microservice.git #github上仓库名
+          #搜索目录，相当于是git上 Repositories 名字
+          search-paths:
+            - springcloud-config
+      #读取分支
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
