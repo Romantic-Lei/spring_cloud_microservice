@@ -10,6 +10,11 @@
 	<artifactId>cloud-config-center-3344</artifactId>
 	<dependencies>
 		<dependency>
+			<groupId>org.eclipse.jgit</groupId>
+			<artifactId>org.eclipse.jgit</artifactId>
+			<version>4.10.0.201712302008-r</version>
+		</dependency>
+		<dependency>
 			<!-- springCloud Config -->
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>

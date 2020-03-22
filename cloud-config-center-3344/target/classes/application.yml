@@ -8,10 +8,11 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:Romantic-Lei/spring_cloud_microservice.git #github上仓库名
+          skipSslValidation: true
+          uri: https://github.com/Romantic-Lei/mergeTest.git #github上仓库名
           #搜索目录，相当于是git上 Repositories 名字
           search-paths:
-            - springcloud-config
+            - mergeTest
       #读取分支
       label: master
 
