@@ -7,7 +7,7 @@
 		<artifactId>springcloud</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>cloud-config-client-3355</artifactId>
+	<artifactId>cloud-config-client-3366</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
