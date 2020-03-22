@@ -11,7 +11,7 @@ import org.springframework.messaging.support.MessageBuilder;
 
 import com.luojia.springcloud.server.IMessageProvider;
 
-@EnableBinding(Source.class) // 定义消息的推动管道
+@EnableBinding(Source.class) // 定义消息的推送管道
 public class IMessageProviderImpl implements IMessageProvider {
 
     // 消息发送管道
