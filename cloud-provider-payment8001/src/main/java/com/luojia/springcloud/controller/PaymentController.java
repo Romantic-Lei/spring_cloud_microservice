@@ -76,7 +76,7 @@ public class PaymentController {
     public String getPayment() {
         return serverPort;
     }
-    
+
     @GetMapping("/payment/feign/timeout")
     public String paymentFeignTimeOut() {
         try {
@@ -85,5 +85,11 @@ public class PaymentController {
             e.printStackTrace();
         }
         return serverPort;
+    }
+    
+    // 链路跟踪
+    @GetMapping(value = "/payment/zipkin")
+    public String paymentZipkin() {
+        return "hi,i'am paymentZipkin server fall back,welcome to here,O(∩_∩)O哈哈~";
     }
 }

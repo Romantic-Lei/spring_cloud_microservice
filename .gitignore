@@ -31,3 +31,12 @@ cloud-api-common/target/maven-archiver/pom.properties
 cloud-api-common/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-api-common/pom.properties
 cloud-api-common/target/classes/META-INF/MANIFEST.MF
 cloud-consumer-order80/.settings/org.eclipse.wst.common.project.facet.core.xml
+cloud-consumer-order80/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-consumer-order80/pom.properties
+cloud-stream-rabbitmq-consumer8802/target/classes/application.yml
+cloud-provider-payment8001/target/classes/com/luojia/springcloud/controller/PaymentController.class
+cloud-consumer-order80/target/classes/com/luojia/springcloud/controller/OrderController.class
+cloud-consumer-order80/target/classes/application.yml
+cloud-consumer-order80/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-consumer-order80/pom.xml
+cloud-stream-rabbitmq-consumer8803/target/classes/application.yml
+cloud-stream-rabbitmq-consumer8803/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-stream-rabbitmq-consumer8803/pom.properties
+cloud-stream-rabbitmq-consumer8802/target/classes/META-INF/maven/cn.luojia.springcloud/cloud-stream-rabbitmq-consumer8802/pom.properties
