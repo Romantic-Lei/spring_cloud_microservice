@@ -7,6 +7,7 @@ import javax.websocket.server.PathParam;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.luojia.springcloud.entities.CommonResult;
@@ -29,7 +30,7 @@ public class PaymentController {
     }
     
     @GetMapping("/paymentSQL/{id}")
-    public CommonResult<Payment> paymentSql(@PathParam("id") Long id){
+    public CommonResult<Payment> paymentSql(@PathVariable("id") Long id){
         Payment payment = hashMap.get(id);
         return new CommonResult<>(200, "from mysql,serverPort:" + serverPort, payment);
     }
