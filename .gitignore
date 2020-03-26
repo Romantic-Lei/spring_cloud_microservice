@@ -143,3 +143,17 @@ cloudalibaba-provider-payment9004/.settings/org.eclipse.core.resources.prefs
 cloudalibaba-provider-payment9003/.settings/org.eclipse.m2e.core.prefs
 cloudalibaba-provider-payment9003/.settings/org.eclipse.jdt.core.prefs
 cloudalibaba-provider-payment9003/.settings/org.eclipse.core.resources.prefs
+seata-order-service2001/.classpath
+seata-order-service2001/.settings/org.eclipse.m2e.core.prefs
+seata-order-service2001/.settings/org.eclipse.jdt.core.prefs
+seata-order-service2001/.settings/org.eclipse.core.resources.prefs
+seata-order-service2001/target/classes/com/luojia/springcloud/SeataOrderMain2001.class
+seata-order-service2001/target/classes/application.yml
+seata-order-service2001/target/classes/META-INF/maven/cn.luojia.springcloud/seata-order-service2001/pom.xml
+seata-order-service2001/target/classes/META-INF/maven/cn.luojia.springcloud/seata-order-service2001/pom.properties
+seata-order-service2001/target/classes/META-INF/MANIFEST.MF
+seata-order-service2001/target/classes/registry.conf
+seata-order-service2001/target/classes/file.conf
+seata-order-service2001/target/classes/com/luojia/springcloud/domain/Order.class
+seata-order-service2001/target/classes/com/luojia/springcloud/domain/CommonResult.class
+seata-order-service2001/target/classes/com/luojia/springcloud/dao/OrderDao.class
