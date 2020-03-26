@@ -2,6 +2,7 @@ package com.luojia.springcloud.controller;
 
 import javax.annotation.Resource;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +12,7 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.luojia.springcloud.entities.CommonResult;
 import com.luojia.springcloud.entities.Payment;
+import com.luojia.springcloud.service.PaymentService;
 
 @RestController
 //@Slf4j
@@ -52,5 +54,14 @@ public class CircleBreakerController {
         Payment payment = new Payment(id, null);
         return new CommonResult<>(445, "blockHandler-sentinel 限流，无此流水号：blockException" + exception.getMessage(), payment);
     }
+    
+    // ================OpenFeign
+    @Resource
+    private PaymentService paymentService;
+    
+    @GetMapping("/consumer/paymentSQL/{id}")
+    public CommonResult<Payment> paymentSQL(@PathVariable("id") Long id){
+        return paymentService.paymentSQL(id);
+    } 
 
 }
