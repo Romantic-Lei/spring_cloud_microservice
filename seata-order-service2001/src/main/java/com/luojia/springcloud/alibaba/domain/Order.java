@@ -1,4 +1,4 @@
-package com.luojia.springcloud.domain;
+package com.luojia.springcloud.alibaba.domain;
 
 import java.math.BigDecimal;
 

@@ -8,6 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableDiscoveryClient
 @EnableFeignClients
+// 排除默认的数据源
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 public class SeataOrderMain2001 {
 
