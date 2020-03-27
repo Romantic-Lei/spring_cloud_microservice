@@ -10,6 +10,7 @@ import com.luojia.springcloud.alibaba.service.AccountService;
 import com.luojia.springcloud.alibaba.service.OrderService;
 import com.luojia.springcloud.alibaba.service.StorageService;
 
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
@@ -32,6 +33,7 @@ public class OrderServiceImpl implements OrderService {
      * @param order 订单对象
      */
     @Override
+    @GlobalTransactional(name = "fsp-create-order", rollbackFor = Exception.class)
     public void create(Order order) {
         // 1 新建订单
         log.info("----->开始新建订单");
