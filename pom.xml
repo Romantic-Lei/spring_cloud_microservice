@@ -35,6 +35,7 @@
   	<module>cloudalibaba-provider-payment9004</module>
   	<module>cloudalibaba-consumer-nacos-order84</module>
   	<module>seata-order-service2001</module>
+  	<module>seata-storage-service2002</module>
   </modules>
   <!--统一管理jar包和版本-->
     <properties>
@@ -45,7 +46,7 @@
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.18</lombok.version>
         <mysql.version>5.1.47</mysql.version>
-         <druid.version>1.1.16</druid.version>
+        <druid.version>1.1.16</druid.version>
         <druid.spring.boot.starter.version>1.1.10</druid.spring.boot.starter.version>
         <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
         <spring.cloud.version>Hoxton.SR1</spring.cloud.version>
