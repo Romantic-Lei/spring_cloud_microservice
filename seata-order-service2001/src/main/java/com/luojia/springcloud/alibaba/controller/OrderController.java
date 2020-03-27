@@ -1,4 +1,4 @@
-package com.luojia.springcloud.alibaba;
+package com.luojia.springcloud.alibaba.controller;
 
 import javax.annotation.Resource;
 
