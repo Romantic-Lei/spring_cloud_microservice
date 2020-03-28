@@ -20,20 +20,20 @@ public class OrderController {
     private OrderService orderService;
     @Resource
     private IdGeneratorSnowflake idGeneratorSnowflake;
-    
+
     @GetMapping("order/create")
     public CommonResult create(Order order) {
         orderService.create(order);
         return new CommonResult(200, "订单创建成功");
     }
-    
+
     // 利用雪花算法生成账单id
     @GetMapping("snowflake")
     public String getIdBySnowflake() {
         // 获取线程池
         ExecutorService threadPool = Executors.newFixedThreadPool(5);
         for (int i = 0; i < 20; i++) {
-            threadPool.submit(() ->{
+            threadPool.submit(() -> {
                 System.out.println(idGeneratorSnowflake.snowflakeld());
             });
         }
