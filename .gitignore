@@ -210,3 +210,4 @@ seata-account-service2003/target/classes/mapper/AccountMapper.xml
 seata-order-service2001/.settings/org.eclipse.wst.common.project.facet.core.xml
 seata-order-service2001/target/classes/com/luojia/springcloud/alibaba/snowflake/IdGeneratorSnowflake.class
 fcf/.classpath
+/.metadata/
